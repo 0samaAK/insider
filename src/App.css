@@ -1,0 +1,761 @@
+@import "tailwindcss";
+
+/* #banner{
+    background-image: url(public/sand.png);
+    background-repeat: no-repeat;
+    border: 2px black;
+} */
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: #FFE8D9;
+}
+
+::-webkit-scrollbar-thumb{
+    background: oklch(0.769 0.188 70.08);
+    border-radius: 10px;
+    border: 1px solid wheat;
+}
+
+.shoe{
+    animation: shoe 3s linear;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-delay: 1s;
+    overflow-y: hidden;
+}
+
+.wave1{
+    animation: wave 1s linear infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-delay: 1s;
+}
+
+.wave2{
+    animation: wave 1s linear infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-delay: 2s;
+}
+
+@keyframes shoe {
+    from{
+       top: -100%;
+    }
+    to{
+        top: 20vh;
+    }
+}
+
+@keyframes wave {
+    from{
+        top: -50vh;
+    }
+    to{
+        top: 0;
+    } 
+}
+
+
+
+/* 
+@media screen and (max-width:375px) {
+    .logo{
+        font-size: xx-small;
+    }
+    .logoDiv{
+        padding: 10px;
+    }
+    .nav li{
+        font-size: xx-small;
+    }
+    .shoe{
+        height:10vh;
+        top: 24px;
+        width: 25vw;
+    }
+    .div{
+        height: 30vw;
+    }
+    .product h1{
+        font-size: xx-large;
+    }
+    .product div{
+        flex-direction: column;
+    }
+    .pitem div{
+        width: 90vw;
+        height: 47vh;
+    }
+    .sel{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .sel h1{
+        font-size: xx-large;
+        margin-left: 25px;
+    }
+    .sel div button{
+        padding: 10px 20px;
+        font-size: small;
+    }
+    .selitem{
+        min-height: 30vh;
+        min-width: 75vw;
+    }
+    .selimg{
+        padding: 0 0px;
+        height: 180px;
+    }
+    .selimg img{
+        padding: 0 20px;
+    }
+    .exp div h1{
+        font-size: xx-large;
+        margin: 0;
+    }
+    .exp div:nth-child(2) h1{
+        font-size: xx-large;
+        margin: 0;
+    }
+    .exp div:nth-child(3) h1{
+        font-size: xx-large;
+        margin: 0;
+    }
+    .exp div p{
+        font-size: xx-small;
+        margin: 0;
+    }
+    .exp div{
+        top: 165px;
+    }
+    .exp div img{
+        width: 83vw;
+    }
+    .love{
+        margin-top: 75px;
+    }
+    .love h1{
+        font-size: x-large;
+    }
+    .loveitem{
+        width: 100vw;
+        margin-top: 20px;
+    }
+    .loveitem h2{
+        font-size: larger;
+    }
+    .loveitem p{
+        font-size: small;
+        width: 90vw;
+    }
+    .loveitem img{
+        margin: 0px 0px 25px 90px;
+    }
+    .loveitem hr{
+        margin-right: 20px;
+    }
+    .blog{
+        margin: 0;
+    }
+    .blog h1{
+        font-size: xx-large;
+    }
+    .bitem{
+        margin: 0;
+    }
+    .bitem h2{
+        margin-top: 10px;
+    }
+    .bitem button{
+        margin-bottom: 25px;
+    }
+    .foot{
+        flex-direction: column;
+        margin: 0;
+    }
+    .foot div:first-child{
+        flex-direction: column;
+        margin: 10px;
+    }
+    .foot div h3{
+        font-size: x-large;
+    }
+    .foot div ul li{
+        font-size: large;
+    }
+    .foot div:nth-child(2){
+        margin: 10px;
+    }
+    .foot div:nth-child(3){
+        margin: 10px;
+    }
+    .foot div:nth-child(4){
+        margin: 10px;
+    }
+    .foot div:last-child{
+        margin: 0;
+        padding: 0;
+        gap: 10;
+        font-size: xx-small;
+    }
+} */
+
+/* @media (max-width:768px) {
+    .logo{
+        font-size: larger;
+    }
+    .nav li{
+        font-size: large;
+    }
+    .shoe{
+        height:15vh;
+        top: 100px;
+        width: 20vw;
+    }
+    .div{
+        height: 45vw;
+    }
+    .product h1{
+        font-size: xxx-large;
+    }
+    .product div{
+        flex-direction: column;
+    }
+    .pitem div{
+        width: 80vw;
+        margin-left: 50px;
+        height: 600px;
+        overflow: hidden;
+    }
+    .sel{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .sel h1{
+        font-size: xxx-large;
+        margin-left: 35px;
+    }
+    .sel div button{
+        padding: 10px 20px;
+        font-size: small;
+    }
+    .selitem{
+        min-height: 50px;
+        min-width: 230px;
+    }
+    .selimg{
+        padding: 10px 0 0 0;
+        height: 150px;
+    }
+    .selimg img{
+        padding: 0 10px;
+        margin: 0 20px;
+    }
+    .exp div h1{
+        font-size: xxxx-large;
+        margin: 0 10px;
+    }
+    .exp div:nth-child(2) h1{
+        font-size: xxxx-large;
+        margin: 0 30px;
+    }
+    .exp div:nth-child(3) h1{
+        font-size: xxxx-large;
+        margin: 0 40px;
+    }
+    .exp div p{
+        font-size: small;
+        margin: 0 30px;
+    }
+    .exp div{
+        top: 220px;
+    }
+    .exp div img{
+        width: 91vw;
+    }
+    .love{
+        margin-top: 175px;
+    }
+    .love h1{
+        font-size: xxx-large;
+    }
+    .loveitem{
+        width: 100vw;
+        margin-top: 20px;
+    }
+    .loveitem h2{
+        font-size: x-large;
+    }
+    .loveitem p{
+        font-size: large;
+        width: 90vw;
+    }
+    .loveitem img{
+        margin: 10px 0px 30px 250px;
+    }
+    .loveitem hr{
+        margin-right: 20px;
+    }
+    .blog{
+        margin: 30px 0 0 0;
+    }
+    .blog h1{
+        font-size: xxx-large;
+    }
+    .bitem{
+        margin: 0;
+    }
+    .bitem h2{
+        margin-top: 10px;
+    }
+    .bitem button{
+        margin-bottom: 25px;
+    }
+} */
+/* 
+@media screen and (max-width:412px) {
+    .logo{
+        font-size: x-small;
+    }
+    .nav li{
+        font-size: xx-small;
+    }
+    .shoe{
+        height:10vh;
+        top: 35px;
+        width: 20vw;
+    }
+    .div{
+        height: 30vw;
+    }
+    .product h1{
+        font-size: xx-large;
+    }
+    .product div{
+        flex-direction: column;
+    }
+    .pitem div{
+        width: 90vw;
+        height: 330px;
+        overflow: hidden;
+    }
+    .sel{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .sel h1{
+        font-size: xx-large;
+        margin-left: 25px;
+    }
+    .sel div button{
+        padding: 10px 20px;
+        font-size: small;
+    }
+    .selitem{
+        min-height: 50px;
+        min-width: 300px;
+    }
+    .selimg{
+        padding: 0 0px;
+        height: 180px;
+    }
+    .selimg img{
+        padding: 0 20px;
+    }
+    .exp div h1{
+        font-size: xx-large;
+        margin: 0;
+    }
+    .exp div p{
+        font-size: xx-small;
+        margin: 0;
+    }
+    .exp div{
+        top: 150px;
+    }
+    .exp div img{
+        width: 86vw;
+    }
+    .love{
+        margin-top: 75px;
+    }
+    .love h1{
+        font-size: xx-large;
+    }
+    .loveitem{
+        width: 100vw;
+        margin-top: 20px;
+    }
+    .loveitem h2{
+        font-size: larger;
+    }
+    .loveitem p{
+        font-size: small;
+        width: 90vw;
+    }
+    .loveitem img{
+        margin: 0px 0px 25px 90px;
+    }
+    .loveitem hr{
+        margin-right: 20px;
+    }
+    .blog{
+        margin: 0;
+    }
+    .blog h1{
+        font-size: xx-large;
+    }
+    .bitem{
+        margin: 0;
+    }
+    .bitem h2{
+        margin-top: 10px;
+    }
+    .bitem button{
+        margin-bottom: 25px;
+    }
+    .foot div:first-child{
+        flex-direction: column;
+        margin: 10px;
+    }
+    .foot div h3{
+        font-size: x-large;
+    }
+    .foot div ul li{
+        font-size: large;
+    }
+    .foot div:nth-child(2){
+        margin: 10px;
+    }
+    .foot div:nth-child(3){
+        margin: 10px;
+    }
+    .foot div:nth-child(4){
+        margin: 10px;
+    }
+    .foot div:last-child{
+        margin: 0;
+        padding: 0;
+        gap: 10;
+        font-size: xx-small;
+    }
+} */
+@media screen and (max-width:414px) {
+    .logo{
+        font-size: x-small;
+    }
+    .nav li{
+        font-size: xx-small;
+    }
+    .shoe{
+        height:10vh;
+        top: 35px;
+        width: 20vw;
+    }
+    
+    .sel{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .sel h1{
+        font-size: xx-large;
+        margin-left: 25px;
+    }
+    .sel div button{
+        padding: 10px 20px;
+        font-size: small;
+    }
+    .selitem{
+        min-height: 50px;
+        min-width: 300px;
+    }
+    .selimg{
+        padding: 0 0px;
+        height: 180px;
+    }
+    .selimg img{
+        padding: 0 20px;
+    }
+    .exp div h1{
+        font-size: xx-large;
+        margin: 0;
+    }
+    .exp div p{
+        font-size: xx-small;
+        margin: 0;
+    }
+    .exp div{
+        top: 150px;
+    }
+    .exp div img{
+        width: 86vw;
+    }
+    .love{
+        margin-top: 75px;
+    }
+    .love h1{
+        font-size: xx-large;
+    }
+    .loveitem{
+        width: 100vw;
+        margin-top: 20px;
+    }
+    .loveitem h2{
+        font-size: larger;
+    }
+    .loveitem p{
+        font-size: small;
+        width: 90vw;
+    }
+    .loveitem img{
+        margin: 0px 0px 25px 90px;
+    }
+    .loveitem hr{
+        margin-right: 20px;
+    }
+    .blog{
+        margin: 0;
+    }
+    .blog h1{
+        font-size: xx-large;
+    }
+    .bitem{
+        margin: 0;
+    }
+    .bitem h2{
+        margin-top: 10px;
+    }
+    .bitem button{
+        margin-bottom: 25px;
+    }
+    .foot div:first-child{
+        flex-direction: column;
+        margin: 10px;
+    }
+    .foot div h3{
+        font-size: x-large;
+    }
+    .foot div ul li{
+        font-size: large;
+    }
+    .foot div:nth-child(2){
+        margin: 10px;
+    }
+    .foot div:nth-child(3){
+        margin: 10px;
+    }
+    .foot div:nth-child(4){
+        margin: 10px;
+    }
+    .foot div:last-child{
+        margin: 0;
+        padding: 0;
+        gap: 10;
+        font-size: xx-small;
+    }
+}
+
+/* @media screen and (min-width:667px) {
+    
+    .product h1{
+        font-size: xx-large;
+    }
+    
+    .pitem div{
+        width: 90vw;
+        height: 195px;
+        overflow: hidden;
+    }
+    
+    .exp div h1{
+        font-size: xxx-large;
+        margin: 0 10px;
+    }
+    .exp div:nth-child(2) h1{
+        font-size: xxx-large;
+        margin: 0 30px;
+    }
+    .exp div:nth-child(3) h1{
+        font-size: xxx-large;
+        margin: 0 40px;
+    }
+    .exp div p{
+        font-size: x-small;
+        margin: 10 30px;
+    }
+    .exp div{
+        top: 200px;
+    }
+    .exp div img{
+        width: 91vw;
+    }
+    .love{
+        margin-top: 160px;
+    }
+    .love h1{
+        font-size: xx-large;
+    }
+    .loveitem{
+        width: 100vw;
+        margin-top: 20px;
+    }
+    .loveitem h2{
+        font-size: larger;
+    }
+    .loveitem p{
+        font-size: small;
+        width: 90vw;
+    }
+    .loveitem img{
+        margin: 0px 0px 35px 200px;
+    }
+    .loveitem hr{
+        margin-right: 20px;
+    }
+    .blog{
+        margin: 0;
+    }
+    .blog h1{
+        font-size: xxx-large;
+    }
+    .bitem{
+        margin: 0;
+    }
+    .bitem h2{
+        margin-top: 10px;
+    }
+    .bitem button{
+        margin-bottom: 25px;
+    }
+    .foot div:last-child{
+        margin: 0;
+        padding: 0;
+        gap: 10;
+        font-size: xx-small;
+    }
+} */
+
+/* and (max-width:411px) */
+/* 
+
+
+
+@media (max-width:736px) {
+    .logo{
+        font-size: larger;
+    }
+    .nav li{
+        font-size: large;
+    }
+    .shoe{
+        height:0vh;
+        top: 100px;
+        width: 20vw;
+    }
+    .div{
+        height: 45vw;
+    }
+    .product h1{
+        font-size: xxx-large;
+    }
+    .product div{
+        flex-direction: column;
+    }
+    .pitem div{
+        width: 80vw;
+        margin-left: 50px;
+        height: 400px;
+        overflow: hidden;
+    }
+    .sel{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .sel h1{
+        font-size: xxx-large;
+        margin-left: 35px;
+    }
+    .sel div button{
+        padding: 10px 20px;
+        font-size: small;
+    }
+    .selitem{
+        min-height: 50px;
+        min-width: 230px;
+    }
+    .selimg{
+        padding: 10px 0 0 0;
+        height: 150px;
+    }
+    .selimg img{
+        padding: 0 10px;
+        margin: 0 20px;
+    }
+    .exp div h1{
+        font-size: xxxx-large;
+        margin: 0 10px;
+    }
+    .exp div:nth-child(2) h1{
+        font-size: xxxx-large;
+        margin: 0 30px;
+    }
+    .exp div:nth-child(3) h1{
+        font-size: xxxx-large;
+        margin: 0 40px;
+    }
+    .exp div p{
+        font-size: small;
+        margin: 0 30px;
+    }
+    .exp div{
+        top: 220px;
+    }
+    .exp div img{
+        width: 91vw;
+    }
+    .love{
+        margin-top: 175px;
+    }
+    .love h1{
+        font-size: xxx-large;
+    }
+    .loveitem{
+        width: 100vw;
+        margin-top: 20px;
+    }
+    .loveitem h2{
+        font-size: x-large;
+    }
+    .loveitem p{
+        font-size: large;
+        width: 90vw;
+    }
+    .loveitem img{
+        margin: 10px 0px 30px 250px;
+    }
+    .loveitem hr{
+        margin-right: 20px;
+    }
+    .blog{
+        margin: 30px 0 0 0;
+    }
+    .blog h1{
+        font-size: xxx-large;
+    }
+    .bitem{
+        margin: 0;
+    }
+    .bitem h2{
+        margin-top: 10px;
+    }
+    .bitem button{
+        margin-bottom: 25px;
+    }
+}
+
+ */
